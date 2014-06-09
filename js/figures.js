@@ -21,13 +21,12 @@ rectangle.noStroke();
 twoRect.update();
 
 
-// drawing an ellipse
+// drawing a ellipse
 var ellip = document.getElementById('ellipse');
 var twoEllip = new Two(params).appendTo(ellip);
-var ellipse = two.makeEllipse(100, 50, 20, 80);
+var ellipse = twoEllip.makeEllipse(150, 70, 80, 50);
 
 ellipse.fill = "#881111";
 ellipse.noStroke();
-
 
 twoEllip.update();

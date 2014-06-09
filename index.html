@@ -71,12 +71,32 @@
 
           </div>
           <div class="panel" ng-show="tab === 3">
-            <h4>{{sections.rectangle.title}}</h4>
-            <p>{{sections.rectangle.content}}</p>
+            <div class="col-md-4">
+              <h4>{{sections.rectangle.title}}</h4>
+              <div id="rectangle"></div>
+              <p>{{sections.rectangle.content}}</p>
+              <ol>
+                <li ng-repeat="step in sections.rectangle.steps">{{step}}</li>
+              </ol>
+
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/2f15094289ee43e8273f.js"></script>
+            </div>
           </div>
           <div class="panel" ng-show="tab === 4">
-            <h4>{{sections.ellipse.title}}</h4>
-            <p>{{sections.ellipse.content}}</p>
+            <div class="col-md-4">
+              <h4>{{sections.ellipse.title}}</h4>
+              <div id="ellipse"></div>
+              <p>{{sections.ellipse.content}}</p>
+              <ol>
+                <li ng-repeat="step in sections.ellipse.steps">{{step}}</li>
+              </ol>
+
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/2f15094289ee43e8273f.js"></script>
+            </div>
           </div>
 
         </div>

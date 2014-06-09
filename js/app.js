@@ -33,13 +33,33 @@ function TabsCtrl($scope) {
       tab: 1
     },
     rectangle: {
-      title: 'Rectangule',
-      content: 'Dynamic Group Body - 2',
+      title: 'Drawing a beautiful Rectangle',
+      content: 'We are learning here how to draw a circle. This is a simple shape.  ',
+      steps: [
+        'First you have to make sure that you have the libraries you need, those are jquery and twe.js.',
+        'Then you create a div with some id, in this case I called it circle.',
+        'Then you create a variable in javascript referencing the div#id circle. ',
+        'Now you can create a variable with the parameters values.',
+        'And instantiate a Two object whith the params values and appending it to the div#id cicle',
+        'Well done. So now create a variable calling the method makeCircle where you put (x-position, y-position, and the ratio of the circle)',
+        'Having done that, play a little bit filling it with a color, and i say noStroke()',
+        'The last thing but very important is tu call two.update(). So when the document is ready it will render the drawing.'
+      ],
       tab: 2
     },
     ellipse: {
-      title: 'Ellipse',
-      content: 'Dynamic Group Body - 2',
+      title: 'Drawing a beautiful Ellipse',
+      content: 'We are learning here how to draw a circle. This is a simple shape.  ',
+      steps: [
+        'First you have to make sure that you have the libraries you need, those are jquery and twe.js.',
+        'Then you create a div with some id, in this case I called it circle.',
+        'Then you create a variable in javascript referencing the div#id circle. ',
+        'Now you can create a variable with the parameters values.',
+        'And instantiate a Two object whith the params values and appending it to the div#id cicle',
+        'Well done. So now create a variable calling the method makeCircle where you put (x-position, y-position, and the ratio of the circle)',
+        'Having done that, play a little bit filling it with a color, and i say noStroke()',
+        'The last thing but very important is tu call two.update(). So when the document is ready it will render the drawing.'
+      ],
       tab: 3
     },
     line: {

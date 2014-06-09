@@ -13,7 +13,7 @@ twoCirc.update();
 // drawing a rectangle
 var rect = document.getElementById('rectangle');
 var twoRect = new Two(params).appendTo(rect);
-var rectangle = twoRect.makeRectangle(150, 0, 250, 200);
+var rectangle = twoRect.makeRectangle(150, 70, 150, 100);
 
 rectangle.fill = "#881111";
 rectangle.noStroke();

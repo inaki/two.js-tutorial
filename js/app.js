@@ -21,7 +21,7 @@ function TabsCtrl($scope) {
       title: 'Drawing a beautiful Circle',
       content: 'We are learning here how to draw a circle. This is a simple shape.  ',
       steps: [
-        'First you have to make sure that you have the libraries you need, those are jquery and twe.js.',
+        'First you have to make sure that you have the libraries you need, those are jquery and two.js.',
         'Then you create a div with some id, in this case I called it circle.',
         'Then you create a variable in javascript referencing the div#id circle. ',
         'Now you can create a variable with the parameters values.',

@@ -4,44 +4,46 @@
     <title>Ellipse with two.js</title>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
-    <style>
-    <!-- this is just some css code. -->
-    body {
-      background-color: #ECF0F1;
-    }
-    #ellipse {
-      background-color: #fff;
-      max-width: 500px;
-      margin: 0 auto;
-      margin-top: 100px;
 
-    }
+    <!-- this is just some css code. -->
+    <style>
+      body {
+        background-color: #ECF0F1;
+      }
+      #ellipse {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+      }
     </style>
   </head>
   <body>
   <!-- You need to creat an empty div for appending your twoJS drawing. -->
-  <div id="ellipse"></div>
+    <div id="ellipse"></div>
+
   <script>
 
-    <!-- Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of ellipse -->
+    // Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of ellipse
     var elem = document.getElementById('ellipse');
 
-    <!-- The params variable is the parameters values for the creating the space where the draw will be. -->
+    // The params variable is the parameters values for the creating the space where the draw will be.
     var params = { width: 500, height: 500};
 
-    <!-- Here you instantiate the new TwoJS object and append to it the div id="ellipse" -->
+    // Here you instantiate the new TwoJS object and append to it the div id="ellipse"
     var two = new Two(params).appendTo(elem);
 
-    <!-- This is a variable that holds the creation of the ellipse, with 4 paramters makeRectangle(x-axis, y-axis, width and height) -->
+    // This is a variable that holds the creation of the ellipse, with 4 paramters makeRectangle(x-axis, y-axis, width and height) 
     var ellipse = two.makeEllipse(two.width/2, two.width/2, 120, 80);
 
-    <!-- Then you fill the circle with a color, in hex, rgb, or rgba values. -->
+    // Then you fill the circle with a color, in hex, rgb, or rgba values.
     ellipse.fill = "#881111";
 
-    <!-- Here you state that you don't want it to have a stroke -->
+    // Here you state that you don't want it to have a stroke
     ellipse.noStroke();
 
-    <!-- And this simple line will update and render the drawing. -->
+    // And this simple line will update and render the drawing.
     two.update();
 
     </script>

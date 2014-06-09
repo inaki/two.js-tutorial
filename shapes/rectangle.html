@@ -4,18 +4,19 @@
     <title>Rectangle with two.js</title>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
-    <style>
-    <!-- this is just some css code. -->
-    body {
-      background-color: #ECF0F1;
-    }
-    #rectangle {
-      background-color: #fff;
-      max-width: 500px;
-      margin: 0 auto;
-      margin-top: 100px;
 
-    }
+    <!-- this is just some css code. -->
+    <style>
+      body {
+        background-color: #ECF0F1;
+      }
+      #rectangle {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+      }
     </style>
   </head>
   <body>
@@ -26,13 +27,15 @@
 
   <script>
 
-  <!-- 1. Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of rectangle -->
-  <!-- 2. The params variable is the parameters values for the creating the space where the draw will be. -->
-  <!-- 3. Here you instantiate the new TwoJS object and append to it the div id="rectangle" -->
-  <!-- 4. This is a variable that holds the creation of the rectangle, with 4 paramters makeRectangle(x-axis, y-axis, width and height) -->
-  <!-- 5. Then you fill the circle with a color, in hex, rgb, or rgba values. -->
-  <!-- 6. Here you state that you don not want it to have a stroke -->
-  <!-- 7. And this simple line will update and render the drawing. -->
+
+    //   1. Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of rectangle
+    //   2. The params variable is the parameters values for the creating the space where the draw will be.
+    //   3. Here you instantiate the new TwoJS object and append to it the div id="rectangle"
+    //   4. This is a variable that holds the creation of the rectangle, with 4 paramters makeRectangle(x-axis, y-axis, width and height)
+    //   5. Then you fill the circle with a color, in hex, rgb, or rgba values.
+    //   6. Here you state that you don not want it to have a stroke
+    //   7. And this simple line will update and render the drawing.
+
 
 
     var elem = document.getElementById('rectangle');

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>polygon with two.js</title>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+    <style>
+    body {
+      background-color: #ECF0F1;
+    }
+    #canvas {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 100px;
+
+    }
+    </style>
+  </head>
+  <body>
+
+  <div id="canvas"></div>
+    <script>
+
+    var elem = document.getElementById('canvas');
+    var params = { width: 500, height: 500};
+    var two = new Two(params).appendTo(elem);
+
+    var polygon = two.makeCurve(110, 100, 120, 50, 140, 150, 160, 50, 180, 150, 190, 100, true);
+    polygon.linewidth = 2;
+    polygon.scale = 1.75;
+    polygon.rotation = Math.PI /2;
+    polygon.noFill();
+
+
+    two.update();
+
+    </script>
+  </body>
+</html>

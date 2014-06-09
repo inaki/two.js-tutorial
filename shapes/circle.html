@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>circle for two.js</title>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+    <style>
+    <!-- this is just some css code. -->
+    body {
+      background-color: #ECF0F1;
+    }
+    #circle {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 100px;
+
+    }
+
+    </style>
+  </head>
+  <body>
+
+  <!-- You need to creat an empty div for appending your twoJS drawing. -->
+  <div id="circle"></div>
+
+
+  <script>
+
+    <!-- Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of circle -->
+    var elem = document.getElementById('circle');
+
+    <!-- The params variable is the parameters values for the creating the space where the draw will be. -->
+    var params = { width: 500, height: 500};
+
+    <!-- Here you instantiate the new TwoJS object and append to it the div id="circle" -->
+    var two = new Two(params).appendTo(elem);
+
+    <!-- This is a variable that holds the creation of the circle, with 3 paramters makeCircle(x-axis, y-axis, and ratio) -->
+    var circle = two.makeCircle(two.width/2, two.width/2, 100);
+
+    <!-- Then you fill the circle with a color, in hex, rgb, or rgba values. -->
+    circle.fill = "#881111";
+
+    <!-- Here you state that you don't want it to have a stroke -->
+    circle.noStroke();
+
+
+    <!-- And this simple line will update and render the drawing. -->
+    two.update();
+
+    </script>
+  </body>
+</html>

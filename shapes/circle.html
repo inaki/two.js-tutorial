@@ -22,28 +22,43 @@
   </head>
   <body>
 
-  <!-- You need to creat an empty div for appending your twoJS drawing. -->
+  <!-- You need to create an empty div for appending your twoJS drawing. -->
   <div id="circle"></div>
 
 
   <script>
 
+<<<<<<< HEAD
     // Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of circle
+=======
+    <!-- Here you create a variable for referencing the object you want to work with. In this case its the div with id of circle -->
+>>>>>>> 081e00d94a8757642c85b000220a6aaaa3792186
     var elem = document.getElementById('circle');
 
     // The params variable is the parameters values for the creating the space where the draw will be.
     var params = { width: 500, height: 500};
 
+<<<<<<< HEAD
     // Here you instantiate the new TwoJS object and append to it the div id="circle"
     var two = new Two(params).appendTo(elem);
 
     // This is a variable that holds the creation of the circle, with 3 paramters makeCircle(x-axis, y-axis, and ratio)
+=======
+    <!-- Here you initiate the new TwoJS object and append to it the div id="circle" -->
+    var two = new Two(params).appendTo(elem);
+
+    <!-- This is a variable that holds the creation of the circle, with 3 parameters makeCircle(x-axis, y-axis, and ratio) -->
+>>>>>>> 081e00d94a8757642c85b000220a6aaaa3792186
     var circle = two.makeCircle(two.width/2, two.width/2, 100);
 
     // Then you fill the circle with a color, in hex, rgb, or rgba values.
     circle.fill = "#881111";
 
+<<<<<<< HEAD
     // Here you state that you don't want it to have a stroke
+=======
+    <!-- Here you state that you do not want it to have a stroke -->
+>>>>>>> 081e00d94a8757642c85b000220a6aaaa3792186
     circle.noStroke();
 
 

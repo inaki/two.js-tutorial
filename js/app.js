@@ -22,11 +22,8 @@ function TabsCtrl($scope) {
       content: 'First we tackle a simple circle',
       steps: [
         'First you have to make sure that you have the libraries you need, those are jquery and two.js.',
-<<<<<<< HEAD
         'Then you create a div with some id, in this case I called it circle.',
-=======
         'Then you create a div with an id, in this case I called it circle.',
->>>>>>> 081e00d94a8757642c85b000220a6aaaa3792186
         'Then you create a variable in javascript referencing the div#id circle. ',
         'Now you can create a variable with the parameters values.',
         'Then initiate a Two object whith the params values and append it to the div#id cicle',
@@ -37,7 +34,6 @@ function TabsCtrl($scope) {
       tab: 1
     },
     rectangle: {
-<<<<<<< HEAD
       title: 'Drawing a beautiful Rectangle',
       content: 'We are learning here how to draw a rectangle. This is a simple shape.  ',
       steps: [
@@ -50,10 +46,8 @@ function TabsCtrl($scope) {
         'Having done that, play a little bit filling it with a color, and i say noStroke()',
         'The last thing but very important is tu call two.update(). So when the document is ready it will render the drawing.'
       ],
-=======
       title: 'Rectangle',
       content: 'Dynamic Group Body - 2',
->>>>>>> 081e00d94a8757642c85b000220a6aaaa3792186
       tab: 2
     },
     ellipse: {

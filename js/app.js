@@ -27,7 +27,7 @@ function TabsCtrl($scope) {
         'Now you can create a variable with the parameters values.',
         'Then initiate a Two object whith the params values and append it to the div#id cicle',
         'Well done! So now create a variable calling the method makeCircle where you put (x-position, y-position, and the ratio of the circle)',
-        'Having done that, play a little bit filling it with a color, and i say noStroke()',
+        'Having done that, play a little bit filling it with a color, and I say noStroke()',
         'The last thing but very important is to call two.update(). So when the document is ready it will render the drawing.'
       ],
       tab: 1

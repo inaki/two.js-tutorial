@@ -20,59 +20,28 @@ function TabsCtrl($scope) {
     circle: {
       title: 'Drawing a beautiful Circle',
       content: 'First we tackle a simple circle',
-      steps: [
-        'First you have to make sure that you have the libraries you need, those are jquery and two.js.',
-        'Then you create a div with some id, in this case I called it circle.',
-        'Then you create a div with an id, in this case I called it circle.',
-        'Then you create a variable in javascript referencing the div#id circle. ',
-        'Now you can create a variable with the parameters values.',
-        'Then initiate a Two object whith the params values and append it to the div#id cicle',
-        'Well done! So now create a variable calling the method makeCircle where you put (x-position, y-position, and the ratio of the circle)',
-        'Having done that, play a little bit filling it with a color, and I say noStroke()',
-        'The last thing but very important is to call two.update(). So when the document is ready it will render the drawing.'
-      ],
       tab: 1
     },
     rectangle: {
       title: 'Drawing a beautiful Rectangle',
-      content: 'We are learning here how to draw a rectangle. This is a simple shape.  ',
-      steps: [
-        'First you have to make sure that you have the libraries you need, those are jquery and twe.js.',
-        'Then you create a div with some id, in this case I called it circle.',
-        'Then you create a variable in javascript referencing the div#id rectangle. ',
-        'Now you can create a variable with the parameters values.',
-        'And instantiate a Two object whith the params values and appending it to the div#id rectangle',
-        'Well done. So now create a variable calling the method makeCircle where you put (x-position, y-position, width and height) of the rectangle',
-        'Having done that, play a little bit filling it with a color, and i say noStroke()',
-        'The last thing but very important is tu call two.update(). So when the document is ready it will render the drawing.'
-      ],
+      content: 'Now let\'s do a simple circle',
       title: 'Rectangle',
       content: 'Dynamic Group Body - 2',
       tab: 2
     },
     ellipse: {
       title: 'Drawing a beautiful Ellipse',
-      content: 'We are learning here how to draw a ellipse. This is a simple shape.  ',
-      steps: [
-        'First you have to make sure that you have the libraries you need, those are jquery and twe.js.',
-        'Then you create a div with some id, in this case I called it ellipse.',
-        'Then you create a variable in javascript referencing the div#id ellipse. ',
-        'Now you can create a variable with the parameters values.',
-        'And instantiate a Two object whith the params values and appending it to the div#id cicle',
-        'Well done. So now create a variable calling the method makeCircle where you put (x-position, y-position, width, height) of the ellipse',
-        'Having done that, play a little bit filling it with a color, and i say noStroke()',
-        'The last thing but very important is tu call two.update(). So when the document is ready it will render the drawing.'
-      ],
+      content: 'Ellipse is the daughter of the circle and the rectangle.',
       tab: 3
     },
     line: {
       title: 'Line',
-      content: 'Dynamic Group Body - 2',
+      content: 'Drawing a line it is just about tu points.',
       tab: 4
     },
     curve: {
       title: 'Curve',
-      content: 'Dynamic Group Body - 2',
+      content: 'Here is when things are getting dirty.',
       tab: 5
     }
   };

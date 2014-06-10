@@ -30,3 +30,15 @@ ellipse.fill = "#881111";
 ellipse.noStroke();
 
 twoEllip.update();
+
+
+// drawing a Line
+var linediv = document.getElementById('line');
+var twoLine = new Two(params).appendTo(linediv);
+var line = twoLine.makeLine(100, 50, 150, 110);
+
+line.linewidth = 10;
+line.fill = "#881111";
+line.stroke = "rgba(255, 0, 0, 0.5)";
+
+twoLine.update();

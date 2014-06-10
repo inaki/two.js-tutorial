@@ -41,6 +41,12 @@
             <li ng-class="{ active: isSelected(4) }">
               <a href ng-click="selectTab(4)">Ellipse</a>
             </li>
+            <li ng-class="{ active: isSelected(5) }">
+              <a href ng-click="selectTab(5)">Line</a>
+            </li>
+            <li ng-class="{ active: isSelected(6) }">
+              <a href ng-click="selectTab(6)">Curve</a>
+            </li>
           </ul>
 
         </div>
@@ -83,6 +89,8 @@
             </div>
 
           </div>
+
+
           <div class="panel" ng-show="tab === 3">
             <div class="col-md-4">
               <h4>{{sections.rectangle.title}}</h4>
@@ -94,24 +102,43 @@
                   two.makeRectangle(x, y, width, height);
               </h5>
               <p>Draws a rectangle to the instance's drawing space where x, y are the x, y values for the center point of the rectangle and width, height represents the width and height of the rectangle. It returns a Two.Polygon object.</p>
-
             </div>
             <div class="col-md-8">
               <script src="https://gist.github.com/inaki/9172fa44dac415eabec4.js"></script>
             </div>
           </div>
+
+
           <div class="panel" ng-show="tab === 4">
             <div class="col-md-4">
               <h4>{{sections.ellipse.title}}</h4>
               <div id="ellipse"></div>
               <p>{{sections.ellipse.content}}</p>
-              <ol>
-                <li ng-repeat="step in sections.ellipse.steps">{{step}}</li>
-              </ol>
-
+              <blockquote>makeEllipse</blockquote>
+              <h5>
+                  two.makeEllipse(x, y, width, height);
+              </h5>
+              <p>Draws an ellipse to the instance's drawing space where x, y are the x, y values for the center point of the ellipse and width, height are the dimensions of the ellipse. It returns a Two.Polygon object.</p>
             </div>
             <div class="col-md-8">
               <script src="https://gist.github.com/inaki/83c80bb361402a1687b8.js"></script>
+            </div>
+          </div>
+
+
+          <div class="panel" ng-show="tab === 5">
+            <div class="col-md-4">
+              <h4>{{sections.line.title}}</h4>
+              <div id="line"></div>
+              <p>{{sections.line.content}}</p>
+              <blockquote>makeLine</blockquote>
+              <h5>
+                  two.makeLine(x1, y1, x2, y2);
+              </h5>
+              <p>Draws a line between two coordinates to the instance's drawing space where x1, y1 are the x, y values for the first coordinate and x2, y2 are the x, y values for the second coordinate. It returns a Two.Polygon object.</p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/ceb3d42ee3a03a7c4aca.js"></script>
             </div>
           </div>
 

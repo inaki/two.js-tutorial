@@ -8,7 +8,7 @@
     body {
       background-color: #ECF0F1;
     }
-    #canvas {
+    #line {
       background-color: #fff;
       max-width: 500px;
       margin: 0 auto;
@@ -19,10 +19,18 @@
   </head>
   <body>
 
-  <div id="canvas"></div>
+  <div id="line"></div>
     <script>
 
-    var elem = document.getElementById('canvas');
+    //  1. Here you create a variable for referencing the object you wnat to work with. In this case is the div with id of ellipse
+    //  2. The params variable is the parameters values for the creating the space where the draw will be.
+    //  3. Here you instantiate the new TwoJS object and append to it the div id="line"
+    //  4. This is a variable that holds the creation of the Line, with 4 paramters makeLine(x-axis1, y-axis1, x-axis2, y-axis2)
+    //  5. Then you give color to the stroke, in hex, rgb, or rgba values.
+    //  6. And finally a simple line of code that will update and render the drawing two.update().
+
+
+    var elem = document.getElementById('line');
     var params = { width: 500, height: 500};
     var two = new Two(params).appendTo(elem);
 

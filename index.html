@@ -8,6 +8,7 @@
   <body>
 
   <div class="navbar navbar-fixed-top" role="navigation">
+      <a href="https://github.com/inaki/two.js-tutorial"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,29 +41,47 @@
             <li ng-class="{ active: isSelected(4) }">
               <a href ng-click="selectTab(4)">Ellipse</a>
             </li>
+            <li ng-class="{ active: isSelected(5) }">
+              <a href ng-click="selectTab(5)">Line</a>
+            </li>
+            <li ng-class="{ active: isSelected(6) }">
+              <a href ng-click="selectTab(6)">Curve</a>
+            </li>
           </ul>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" >
           <div class="panel" ng-show="tab === 1">
-            <h1>{{sections.overview.title}}</h1>
-            <p>{{sections.overview.p1}}</p>
-            <p>{{sections.overview.p2}}</p>
-            <ul>
-              <li>{{sections.overview.list[0]}}</li>
-              <li>{{sections.overview.list[1]}}</li>
-              <li>{{sections.overview.list[2]}}</li>
-            </ul>
-            <p>{{sections.overview.p3}}</p>
+            <div class="col-md-4">
+              <div id="logo"></div>
+              <h1>{{sections.overview.title}}</h1>
+              <p>{{sections.overview.p1}}</p>
+              <p>{{sections.overview.p2}}</p>
+              <ul>
+                <li>{{sections.overview.list[0]}}</li>
+                <li>{{sections.overview.list[1]}}</li>
+                <li>{{sections.overview.list[2]}}</li>
+              </ul>
+              <p>{{sections.overview.p3}}</p>
+              <p>The official library for <a href="http://jonobr1.github.io/two.js/">two.js</a>.</p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/a378b32249871ca0aa63.js"></script>
+            </div>
           </div>
+
           <div class="panel" ng-show="tab === 2">
             <div class="col-md-4">
               <h4>{{sections.circle.title}}</h4>
               <div id="circle"></div>
               <p>{{sections.circle.content}}</p>
-              <ol>
-                <li ng-repeat="step in sections.circle.steps">{{step}}</li>
-              </ol>
+              <hr>
+              <blockquote>makeCircle</blockquote>
+              <h5>
+                  two.makeCircle(x, y, radius);
+              </h5>
+              <p>Draws a circle to the instance's drawing space where x, y are the x, y values for the center point of the circle and radius is the radius of the circle. It returns a Two.Polygon object.</p>
+
 
             </div>
             <div class="col-md-8">
@@ -70,13 +89,57 @@
             </div>
 
           </div>
+
+
           <div class="panel" ng-show="tab === 3">
-            <h4>{{sections.rectangle.title}}</h4>
-            <p>{{sections.rectangle.content}}</p>
+            <div class="col-md-4">
+              <h4>{{sections.rectangle.title}}</h4>
+              <div id="rectangle"></div>
+              <p>{{sections.rectangle.content}}</p>
+              <hr>
+              <blockquote>makeRectangle</blockquote>
+              <h5>
+                  two.makeRectangle(x, y, width, height);
+              </h5>
+              <p>Draws a rectangle to the instance's drawing space where x, y are the x, y values for the center point of the rectangle and width, height represents the width and height of the rectangle. It returns a Two.Polygon object.</p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/9172fa44dac415eabec4.js"></script>
+            </div>
           </div>
+
+
           <div class="panel" ng-show="tab === 4">
-            <h4>{{sections.ellipse.title}}</h4>
-            <p>{{sections.ellipse.content}}</p>
+            <div class="col-md-4">
+              <h4>{{sections.ellipse.title}}</h4>
+              <div id="ellipse"></div>
+              <p>{{sections.ellipse.content}}</p>
+              <blockquote>makeEllipse</blockquote>
+              <h5>
+                  two.makeEllipse(x, y, width, height);
+              </h5>
+              <p>Draws an ellipse to the instance's drawing space where x, y are the x, y values for the center point of the ellipse and width, height are the dimensions of the ellipse. It returns a Two.Polygon object.</p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/83c80bb361402a1687b8.js"></script>
+            </div>
+          </div>
+
+
+          <div class="panel" ng-show="tab === 5">
+            <div class="col-md-4">
+              <h4>{{sections.line.title}}</h4>
+              <div id="line"></div>
+              <p>{{sections.line.content}}</p>
+              <blockquote>makeLine</blockquote>
+              <h5>
+                  two.makeLine(x1, y1, x2, y2);
+              </h5>
+              <p>Draws a line between two coordinates to the instance's drawing space where x1, y1 are the x, y values for the first coordinate and x2, y2 are the x, y values for the second coordinate. It returns a Two.Polygon object.</p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/ceb3d42ee3a03a7c4aca.js"></script>
+            </div>
           </div>
 
         </div>
@@ -92,5 +155,6 @@
   <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
   <script src="js/app.js"></script>
   <script src="js/figures.js"></script>
+  <script src="js/logo.js"></script>
   </body>
 </html>

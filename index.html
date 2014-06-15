@@ -48,6 +48,13 @@
               <a href ng-click="selectTab(6)">Curve</a>
             </li>
           </ul>
+          <h5>How to animate a:</h5>
+          <ul class="nav nav-sidebar">
+            <li ng-class="{ active: isSelected(7) }">
+              <a href ng-click="selectTab(7)">Circle</a>
+            </li>
+          </ul>
+
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" >
@@ -145,7 +152,7 @@
           <div class="panel" ng-show="tab === 6">
             <div class="col-md-4">
               <h4>{{sections.curve.title}}</h4>
-              <div id="line"></div>
+              <div id="curve"></div>
               <p>{{sections.curve.content}}</p>
               <blockquote>makeCurve</blockquote>
               <h5>

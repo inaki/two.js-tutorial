@@ -1,6 +1,6 @@
 // drawing a circle
 var circ = document.getElementById('circle');
-var params = { width: 300, height: 150};
+var params = { width: 300, height: 190};
 var twoCirc = new Two(params).appendTo(circ);
 var circle = twoCirc.makeCircle(150, 70, 50);
 
@@ -42,3 +42,17 @@ line.fill = "#881111";
 line.stroke = "rgba(255, 0, 0, 0.5)";
 
 twoLine.update();
+
+
+// drawing a curve
+var curveDiv = document.getElementById('curve');
+var twoCurve = new Two(params).appendTo(curveDiv);
+var curve = twoCurve.makeCurve(110, 100, 120, 50, 140, 150, 160, 50, 180, 150, 190, 100, true);
+
+curve.linewidth = 2;
+curve.scale = 1.75;
+curve.rotation = Math.PI /2;
+curve.noFill();
+curve.stroke = 'rgba(255, 0, 0, 0.5)';
+
+twoCurve.update();

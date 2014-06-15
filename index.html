@@ -142,6 +142,28 @@
             </div>
           </div>
 
+          <div class="panel" ng-show="tab === 6">
+            <div class="col-md-4">
+              <h4>{{sections.curve.title}}</h4>
+              <div id="line"></div>
+              <p>{{sections.curve.content}}</p>
+              <blockquote>makeCurve</blockquote>
+              <h5>
+                  two.makeCurve(x1, y1, x2, y2, xN, yN, open);
+              </h5>
+              <p>Draws a curved polygon to the instance's drawing space. The arguments are a little tricky. It returns a Two.Polygon object.</p>
+              <p>
+                The method accepts any amount of paired x, y values as denoted by the series above. It then checks to see if there is a final argument, a boolean open, which marks whether or not the shape should be open. If true the curve will have two clear endpoints, otherwise it will be closed.
+              </p>
+              <p>
+                This method also recognizes the format two.makeCurve(points, open) where points is an array of Two.Anchor's and open is an optional boolean describing whether or not to expose endpoints. It is imperative if you generate curves this way to make the list of points Two.Anchor's.
+              </p>
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/d43fad0dd277a59afe7f.js"></script>
+            </div>
+          </div>
+
         </div>
       </div>
     </div> <!-- finish tabs -->

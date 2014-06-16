@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
   <head>
-    <title>polygon with two.js</title>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+    <title>pattern for two.js</title>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+
+    <!-- this is just some css code. -->
     <style>
     body {
       background-color: #ECF0F1;
@@ -15,22 +17,29 @@
       margin-top: 100px;
 
     }
+
     </style>
   </head>
   <body>
 
   <div id="canvas"></div>
-    <script>
+
+
+  <script>
 
     var elem = document.getElementById('canvas');
-    var params = { width: 500, height: 500};
+    var params = {width: 500, height: 500};
     var two = new Two(params).appendTo(elem);
 
-    var polygon = two.makeCurve(110, 100, 120, 50, 140, 150, 160, 50, 180, 150, 190, 100, true);
-    polygon.linewidth = 2;
-    polygon.scale = 1.75;
-    polygon.rotation = Math.PI /2;
-    polygon.noFill();
+    var poly = two.makePolygon(110, 100, 120, 50, 140, 150, 160, 50, 180, 150, 190, 100);
+    poly.linewidth = 4;
+    poly.translation = new Two.Vector(params.width / 2, params.height / 2);
+    poly.scale = '2';
+    poly.stroke = "#cccccc";
+    poly.fill = "#ececec";
+
+
+
 
 
     two.update();

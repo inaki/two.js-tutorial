@@ -56,3 +56,30 @@ curve.noFill();
 curve.stroke = 'rgba(255, 0, 0, 0.5)';
 
 twoCurve.update();
+
+
+var pat = document.getElementById('pattern');
+var params = { width: 250, height: 250};
+var twoPattern = new Two(params).appendTo(pat);
+var x = 0, y = 0;
+var circles = [];
+
+var horizontal = function(){
+  for(i = 0; i < params.width; i++) {
+
+      name = 'circle' + i.toString();
+      circles[i] = name;
+      circles[i] = twoPattern.makeCircle(x, y, 20);
+      circles[i].fill = '#2ECC71';
+      circles[i].noStroke();
+      x += 50;
+      if(x > 500){
+        y += 50;
+        x = 0;
+      }
+  }
+}
+
+horizontal();
+
+twoPattern.update();

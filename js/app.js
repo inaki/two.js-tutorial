@@ -43,6 +43,11 @@ function TabsCtrl($scope) {
       title: 'Curve',
       content: 'Here is when things are getting dirty.',
       tab: 5
+    },
+    pattern: {
+      title: 'pattern',
+      content: 'This is really fun stuff!',
+      tab: 5
     }
   };
 

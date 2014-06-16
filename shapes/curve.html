@@ -26,11 +26,12 @@
     var params = { width: 500, height: 500};
     var two = new Two(params).appendTo(elem);
 
-    var curve = two.makeCurve(110, 100, 120, 50, 140, 150, 160, 50, 180, 150, 190, 100, true);
+    var curve = two.makeCurve(210, 200, 220, 150, 240, 250, 260, 150, 280, 250, 290, 200, true);
     curve.linewidth = 2;
     curve.scale = 1.75;
     curve.rotation = Math.PI /2;
     curve.noFill();
+    curve.stroke = 'rgba(255, 0, 0, 0.5)';
 
 
     two.update();

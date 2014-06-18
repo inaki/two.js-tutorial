@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>pattern for two.js</title>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+
+    <!-- this is just some css code. -->
+    <style>
+    body {
+      background-color: #1b1464;
+    }
+
+
+    </style>
+  </head>
+  <body>
+
+  <div id="circle"></div>
+
+
+  <script>
+
+    var elem = document.getElementById('circle');
+    var params = { fullscreen: true};
+    var two = new Two(params).appendTo(elem);
+    var x = 0;
+    var y = 0;
+    var circles = [];
+
+
+    var horizontal = function(){
+      for(i = 0; i < 500; i++) {
+
+          circles[i] = two.makeCircle(x, y, 20);
+          circles[i].fill = '#1b1464';
+          circles[i].noStroke();
+          x += 50;
+          if(x > 500){
+            y += 50;
+            x = 0;
+          }
+          
+      }
+
+
+
+    }
+
+    horizontal();
+
+    two.bind('update', function(frameCount) {
+      // This code is called everytime two.update() is called.
+      // Effectively 60 times per second.
+      var colors = ['#0071bc', '#e54960', '#fff200', '#ffffff', '#00ffff'];
+
+
+      for(i=0; i<colors.length; i++){
+        var randomi = Math.floor(Math.random() * 120) + 1;
+        circles[randomi].fill = colors[i];
+      }
+
+
+
+    }).play();
+
+    </script>
+  </body>
+</html>

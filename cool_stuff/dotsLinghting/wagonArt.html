@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Two.js: Interpret Svg&apos;s</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="image_src" href="../images/logo.gif" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+    <style>
+      #assets {
+        display: none;
+      }
+      body {
+        background: rgb(0, 200, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="assets">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+		<path fill="#231F20" d="M233,104c-0.9,30.3-1.8,60.5-2.7,90.8c-28.9,7.2-57.8,14.4-86.6,21.7c-3,0.8-6.3,3.6-6.8,6.8
+			c-4.9,30.2-9.7,60.4-14.6,90.6c-0.8,5.2,1.3,10.5,6.8,12c4.7,1.3,11.1-1.6,12-6.8c4.6-28.4,9.2-56.9,13.8-85.3
+			c29.2-7.3,58.4-14.6,87.6-21.9c4.3-1.1,7-5.1,7.2-9.4c1-32.8,1.9-65.6,2.9-98.4C252.9,91.4,233.4,91.5,233,104z"/>
+		<path fill="#231F20" d="M198.6,391.2c45.2-15.3,90.4-30.5,135.6-45.8c2.9-1,5.8-1.9,8.6-2.9c11.8-4,6.8-22.8-5.2-18.8
+			c-45.2,15.3-90.4,30.5-135.6,45.8c-2.9,1-5.8,1.9-8.6,2.9C181.6,376.4,186.6,395.2,198.6,391.2L198.6,391.2z"/>
+		<path fill="#231F20" d="M471.9,134.6c-10.7-6.2-21.4-12.3-32.2-18.5c-3.6-2.1-8.9-1.8-11.8,1.5c-12.7,14.6-25.4,29.1-38,43.7
+			c-9.2-13.3-18.4-26.5-27.5-39.8c-4.1-6-12.8-6.6-16.8,0c-14.3,23.4-28.6,46.8-42.9,70.2c-6.6,10.8,10.3,20.5,16.8,9.8
+			c11.7-19.1,23.3-38.2,35-57.3c8.7,12.6,17.4,25.2,26.1,37.8c3.3,4.8,10.9,7,15.3,2c13.7-15.7,27.3-31.4,41-47.1
+			c8.4,4.8,16.8,9.7,25.2,14.5C472.9,157.7,482.8,140.9,471.9,134.6z"/>
+		<path fill="#231F20" d="M61.8,32.9C77.8,54,93.7,75.2,109.6,96.3c3.2,4.2,8.3,6.4,13.3,3.5c4.2-2.4,6.7-9.1,3.5-13.3
+			c-15.9-21.1-31.8-42.2-47.8-63.4c-3.2-4.2-8.3-6.4-13.3-3.5C61.2,22,58.6,28.7,61.8,32.9L61.8,32.9z"/>
+		<path fill="#231F20" d="M246.7,42.6c32.8,0,65.6,0,98.4,0c12.6,0,12.6-19.5,0-19.5c-32.8,0-65.6,0-98.4,0
+			C234.1,23.1,234.1,42.6,246.7,42.6L246.7,42.6z"/>
+		<path fill="#231F20" d="M410.3,277.6c17.9,16.2,35.7,32.5,53.6,48.7c9.3,8.4,23.1-5.3,13.8-13.8c-17.9-16.2-35.7-32.5-53.6-48.7
+			C414.9,255.4,401,269.1,410.3,277.6L410.3,277.6z"/>
+		<path fill="#231F20" d="M125.5,477.3c-21.8-31.8-43.5-63.7-65.3-95.5c-7-10.3-23.9-0.6-16.8,9.8c21.8,31.8,43.5,63.7,65.3,95.5
+			C115.7,497.4,132.6,487.7,125.5,477.3L125.5,477.3z"/>
+		<path fill="#231F20" d="M68,190.7c-7.8-14-15.6-27.9-23.4-41.9c-6.1-11-23-1.1-16.8,9.8c6.3,11.4,12.7,22.7,19,34.1
+			c-8.1,5.6-16.2,11.3-24.3,16.9c-4.7,3.3-5.8,8.2-3.5,13.3c4.9,10.7,9.7,21.4,14.6,32.2c2.2,4.8,9.1,6,13.3,3.5
+			c4.9-2.9,5.7-8.5,3.5-13.3c-3.6-8-7.2-15.9-10.9-23.9c8.3-5.8,16.6-11.6,24.9-17.4C68.9,201,70.7,195.6,68,190.7z"/>
+		<path fill="#231F20" d="M421.2,416.3c-5-2.9-10.1-0.7-13.3,3.5c-8.3,11-16.6,22-24.9,33c-8.7-11-17.4-22-26.1-33
+			c-3.1-3.9-10.6-3.7-13.8,0c-6.9,8.1-13.8,16.2-20.7,24.4c-5.1-5.5-10.2-11-15.2-16.6c-3.4-3.7-10.4-3.9-13.8,0
+			c-7.1,8.1-14.3,16.2-21.4,24.4c-8.3,9.4,5.5,23.2,13.8,13.8c4.9-5.6,9.8-11.1,14.7-16.7c5.1,5.6,10.2,11.1,15.4,16.7
+			c3.4,3.7,10.4,3.9,13.8,0c6.7-7.9,13.4-15.8,20.2-23.8c8.8,11.2,17.7,22.3,26.5,33.5c4.3,5.4,11.9,2.5,15.3-2
+			c11-14.6,22.1-29.2,33.1-43.9C427.9,425.4,425.4,418.7,421.2,416.3z"/>
+		<path fill="#231F20" d="M465,470.5c12.6,0,12.6-19.5,0-19.5C452.4,451,452.4,470.5,465,470.5L465,470.5z"/>
+		<path fill="#231F20" d="M167.7,28c12.6,0,12.6-19.5,0-19.5C155.2,8.5,155.2,28,167.7,28L167.7,28z"/>
+		<path fill="#231F20" d="M27.4,454.9c12.6,0,12.6-19.5,0-19.5C14.8,435.4,14.8,454.9,27.4,454.9L27.4,454.9z"/>
+		<path fill="#231F20" d="M272,290.2c12.6,0,12.6-19.5,0-19.5C259.4,270.7,259.4,290.2,272,290.2L272,290.2z"/>
+		<path fill="#231F20" d="M472.8,45.5c12.6,0,12.6-19.5,0-19.5C460.2,26,460.2,45.5,472.8,45.5L472.8,45.5z"/>
+		</svg>
+
+
+</div>
+	<div class="scripts">
+      <script>
+
+        $(function() {
+
+		var two = new Two({fullscreen:true}).appendTo(document.body); //creates a new instance of two
+		var el = $('#assets svg')[0]; //calling the svg and naming it 'el'
+		var shape = two.interpret(el).center(); //reading the svg and making it a two group and then centers it
+		shape.translation.set(two.width / 2, two.height / 2);
+		var keys = Object.keys(shape.children); //the keys are an array of the number of the shape's children
+		var child = shape.children[keys[0]]; //?
+		shape.opacity = 1; //initial opacity
+
+		two.bind('update', function (frameCount) {
+		    if (keys.length > 0) { //reading how many elements are in the array
+		        if (child.opacity > 0.999) {
+		            keys.shift(); //removes the first item of an array and then will return it
+		            child = shape.children[keys[0]];
+		        }
+		        if (child) child.opacity += 0.1;
+		    } else {
+		        shape.opacity = .5;
+		        keys = Object.keys(shape.children);
+		        child = shape.children[keys[0]];
+		    }
+
+		}).play();
+
+        });
+
+      </script>
+	</div>
+  </body>
+</html>

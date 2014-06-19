@@ -83,3 +83,47 @@ var horizontal = function(){
 horizontal();
 
 twoPattern.update();
+
+
+
+// BlinkingPattern
+
+
+var blinkPat = document.getElementById('blinkingPattern');
+var params = {width: 250, height: 250};
+var twoBlinkPat = new Two(params).appendTo(blinkPat);
+var x = 0;
+var y = 0;
+var circles = [];
+
+
+var horizontal = function(){
+  for(i = 0; i < 500; i++) {
+
+      circles[i] = twoBlinkPat.makeCircle(x, y, 20);
+      circles[i].fill = '#1b1464';
+      circles[i].noStroke();
+      x += 50;
+      if(x > 500){
+        y += 50;
+        x = 0;
+      }
+  }
+}
+
+horizontal();
+
+twoBlinkPat.bind('update', function(frameCount) {
+  // This code is called everytime twoBlinkPat.update() is called.
+  // Effectively 60 times per second.
+  var colors = ['#0071bc', '#e54960', '#fff200', '#ffffff', '#00ffff'];
+
+
+  for(i=0; i<colors.length; i++){
+    var randomi = Math.floor(Math.random() * 120) + 1;
+    circles[randomi].fill = colors[i];
+  }
+
+
+
+}).play();

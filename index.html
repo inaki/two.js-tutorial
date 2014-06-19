@@ -48,16 +48,20 @@
               <a href ng-click="selectTab(6)">Curve</a>
             </li>
           </ul>
-          <h5>How to animate a:</h5>
+          <!-- <h5>How to animate a:</h5>
           <ul class="nav nav-sidebar">
             <li ng-class="{ active: isSelected(11) }">
               <a href ng-click="selectTab(11)">Circle</a>
             </li>
-          </ul>
+
+          </ul> -->
           <h5>Serious playing:</h5>
           <ul class="nav nav-sidebar">
             <li ng-class="{ active: isSelected(21) }">
               <a href ng-click="selectTab(21)">Pattern</a>
+            </li>
+            <li ng-class="{ active: isSelected(22) }">
+              <a href ng-click="selectTab(22)">BlinkingPattern</a>
             </li>
           </ul>
 
@@ -199,6 +203,7 @@
             </div>
           </div>
 
+<!-- cool stuff -->
           <div class="panel" ng-show="tab === 21 ">
             <div class="col-md-4">
               <h4>{{sections.pattern.title}}</h4>
@@ -211,7 +216,19 @@
               <script src="https://gist.github.com/inaki/d56b485bf245307553b4.js"></script>
             </div>
           </div>
+          <div class="panel" ng-show="tab === 22 ">
+            <div class="col-md-4">
+              <h4>{{sections.pattern.title}}</h4>
+              <div id="blinkingPattern"></div>
+              <p>{{sections.pattern.content}}</p>
+              <blockquote>just makeCircles</blockquote>
 
+            </div>
+            <div class="col-md-8">
+              <script src="https://gist.github.com/inaki/ea8b38b915798cf52d75.js"></script>
+            </div>
+          </div>
+<!-- end of cool stuff -->
         </div>
       </div>
     </div> <!-- finish tabs -->

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>pattern for two.js</title>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/two.js/0.3.0/two.min.js"></script>
+
+    <!-- this is just some css code. -->
+    <style>
+    body {
+      background-color: #fff;
+    }
+
+
+    </style>
+  </head>
+  <body>
+
+  <div id="circle"></div>
+
+
+  <script>
+
+    var elem = document.getElementById('circle');
+    var params = { fullscreen: true};
+    var two = new Two(params).appendTo(elem);
+    var x = 0;
+    var y = 150;
+    var blueDiamond = [];
+
+
+    var diamonds = function(){
+      for(i = 0; i < 200; i++) {
+
+          blueDiamond[i] = two.makePolygon(75, 125, 125, 157, 75, 190, 25, 157);;
+          blueDiamond[i].fill = '#1b1464';
+          blueDiamond[i].noStroke();
+          blueDiamond[i].translation = new Two.Vector(x, y);
+          x += 150;
+      }
+
+
+
+    }
+
+    diamonds();
+
+    two.bind('update', function(frameCount) {
+      // This code is called everytime two.update() is called.
+      // Effectively 60 times per second.
+      var colors = ['#3FA8F2', '#192EA5'];
+
+
+      for(i=0; i<colors.length; i++){
+        var randomi = Math.floor(Math.random() * 120) + 1;
+        blueDiamond[randomi].fill = colors[i];
+      }
+
+
+
+    }).play();
+
+    </script>
+  </body>
+</html>

@@ -67,8 +67,7 @@ var circles = [];
 var horizontal = function(){
   for(i = 0; i < params.width; i++) {
 
-      name = 'circle' + i.toString();
-      circles[i] = name;
+
       circles[i] = twoPattern.makeCircle(x, y, 20);
       circles[i].fill = '#2ECC71';
       circles[i].noStroke();

@@ -89,7 +89,7 @@ twoPattern.update();
 
 
 var blinkPat = document.getElementById('blinkingPattern');
-var params = {width: 250, height: 250};
+var params = {width: 280, height: 250};
 var twoBlinkPat = new Two(params).appendTo(blinkPat);
 var x = 0;
 var y = 0;

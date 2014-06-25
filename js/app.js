@@ -7,7 +7,7 @@ function TabsCtrl($scope) {
   $scope.sections = {
     overview: {
       title: 'Overview',
-      p1: 'This an "easy" tutorial for learning two.js. I love the library and I want to share the easiest way to start playing with it. I think the easiest way is just copy and paste code that acutally work and start messing with it. ',
+      p1: 'This an "easy" tutorial for learning two.js. I love the library and I want to share the easiest way to start playing with it. I think the easiest way is copy and paste code that just works and start messing with it. ',
       p2: 'I will try to make it very simple in this way:',
       list: [
         'Mixing explanation with comments in the code.',
